@@ -58,7 +58,9 @@ def game_loop():
     textRect2 = text2.get_rect()
     textRect2.center = (100, 50)
     
-    eggy += 3
+    eggspeed = caught + 1
+    
+    eggy += eggspeed
 
 
     screen.blit(backgroundImg, (0, 0))
@@ -76,7 +78,7 @@ def game_loop():
         screen.blit(text, textRect)
         screen.blit(crackedEggImg, (eggx, eggy))
         pygame.display.flip()
-        time.sleep(5)
+        time.sleep(2)
         game_loop()
 
       
