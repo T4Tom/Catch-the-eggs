@@ -48,7 +48,7 @@ def game_loop():
       if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
         exit()
         
-    basketspeed = caught + 1
+    basketspeed = caught + 1.5
 
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_RIGHT] and basketx + 100 < 800:
