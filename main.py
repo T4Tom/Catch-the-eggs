@@ -47,12 +47,14 @@ def game_loop():
         exit()
       if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
         exit()
+        
+    basketspeed = caught + 1
 
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_RIGHT] and basketx + 100 < 800:
-      basketx += 5
+      basketx += basketspeed
     if pressed[pygame.K_LEFT] and basketx > 0:
-      basketx -= 5
+      basketx -= basketspeed
 
     text2 = font2.render('Caught: {0}'.format(caught), True, (0, 0, 0))
     textRect2 = text2.get_rect()
